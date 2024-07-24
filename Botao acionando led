@@ -1,0 +1,22 @@
+//Botao acionando
+const int buttonPin = 2; // Numero do pino do botão const
+int ledPin = 13; // Numero do pino do LED
+int buttonState = 0; // variavel para ler o estado do botão
+void setup() {
+// inicializa o pino do LED como saida:
+pinMode(ledPin, OUTPUT);
+// inicializa o pino do botao como entrada:
+pinMode(buttonPin, INPUT);
+}
+void loop(){
+buttonState = digitalRead(buttonPin); // faz a leitura do valor do botao:
+// verifica se o botao esta pressionado.
+// em caso positivo, buttonState e HIGH:
+if (buttonState == HIGH) {
+// liga o LED:
+digitalWrite(ledPin, HIGH);
+} else {
+// desliga o LED:
+digitalWrite(ledPin, LOW);
+}
+}
